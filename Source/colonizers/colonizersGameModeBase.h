@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/GameModeBase.h"
+#include "GameFramework/GameMode.h"
 #include "colonizersGameModeBase.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class COLONIZERS_API AcolonizersGameModeBase : public AGameModeBase
+class COLONIZERS_API AcolonizersGameModeBase : public AGameMode
 {
 	GENERATED_BODY()
 	
