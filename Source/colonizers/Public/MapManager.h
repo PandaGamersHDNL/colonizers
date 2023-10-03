@@ -15,6 +15,19 @@ class COLONIZERS_API AMapManager : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AMapManager();
+	UPROPERTY(EditDefaultsOnly)
+	int MapRadius = 3;
+
+	UPROPERTY(EditDefaultsOnly)
+	float TileRadius = 100.f;
+
+	UPROPERTY(EditDefaultsOnly)
+	float TileTriangleHeight = 86.6f ;
+	UPROPERTY(EditDefaultsOnly)
+	float StreetWidth = 20.f;
+
+	UPROPERTY(EditDefaultsOnly)
+	float CityHeight = 17.3f;
 
 protected:
 	// Called when the game starts or when spawned
@@ -31,4 +44,18 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void AddActorToList(int index, AActor* newActor);
 
+	UFUNCTION(BlueprintCallable)
+	FVector GetStart(int radius);
+		
+	/*
+	UFUNCTION(BlueprintCallable)
+	void MapGen();
+	UFUNCTION(BlueprintCallable)
+	void TileGen();
+	*/
+
+	UFUNCTION(BlueprintCallable)
+	bool IsEdge(FVector tileLocation);
+
+	float getXoffset(int offset);
 };
